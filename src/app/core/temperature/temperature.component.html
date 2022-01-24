@@ -1,0 +1,33 @@
+<section class="pt-3 px-5 shadow-lg">
+    <div class="row title">
+        <div class="col mb-3 text-center">
+            <h3>Temperature</h3>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-2"></div>
+        <div class="col text-center">
+            
+            <ngx-charts-linear-gauge
+                [view]="[500,300]"
+                [value]="value"
+                [previousValue]="previousValue"
+                [units]="units"
+                [min]="20" [max]="40">
+            </ngx-charts-linear-gauge>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <button class="btn--lg  btn--primary mr-5 ">Start</button>
+            <button class="btn--lg  btn--primary ">Stop</button>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <div>Average temperature : {{avgTemp}} degrees</div>
+        </div>
+    </div>
+</section>

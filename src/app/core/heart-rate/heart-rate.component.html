@@ -1,0 +1,38 @@
+<section class="pt-3 px-5 shadow-lg ">
+    
+    <div class="row ">
+        
+        <div class="col mb-3 text-center" >
+            <!-- [timeline]="timeline" -->
+            
+            <ngx-charts-line-chart
+            [view]= "[1000, 500]"
+            [legend]="legend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxis]="xAxis"
+            [yAxis]="yAxis"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [results]="multi"
+            (select)="onSelect($event)"
+            (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)"
+            >
+          </ngx-charts-line-chart>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <button class="btn--lg  btn--primary mr-5 ">Start</button>
+            <button class="btn--lg  btn--primary ">Stop</button>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <div>Heart beat rate : {{heartRate}} BPM</div>
+        </div>
+    </div>
+</section>
